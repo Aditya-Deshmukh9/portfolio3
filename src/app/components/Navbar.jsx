@@ -44,7 +44,8 @@ function Navbar() {
                   alt="logo"
                   width={90}
                   height={100}
-                  loading="lazy"
+                  priority={true}
+                  style={{ width: "120px", height: "auto" }}
                 />
               </Link>
             </div>
@@ -70,10 +71,13 @@ function Navbar() {
           <div className="flex items-center justify-between">
             <div className="">
               <Link href="#">
-                <img
-                  src="assets/ani-logo.gif"
+                <Image
+                  src="/assets/ani-logo.gif"
                   alt="logo"
                   width={90}
+                  height={100}
+                  priority={true}
+                  style={{ width: "120px", height: "auto" }}
                   className="m-2"
                 />
               </Link>

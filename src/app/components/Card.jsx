@@ -1,18 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { BiLink } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 
 function Card({ image, title, description, githubLink, liveLink, category }) {
   return (
-    <Link
-      href="/title"
-      className="m-4 block p-2 max-w-sm bg-slate-900 overflow-hidden rounded-md"
-    >
+    <div className="m-4 block p-2 max-w-sm bg-slate-900 overflow-hidden rounded-md">
       <div className="relative">
-        <img
+        <Image
           src={image}
           alt={title}
+          height={500}
+          width={500}
           className="w-full h-60 object-cover object-left-top rounded-md"
         />
         <div className="flex flex-col justify-between  p-4 text-white">
@@ -38,7 +37,7 @@ function Card({ image, title, description, githubLink, liveLink, category }) {
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 

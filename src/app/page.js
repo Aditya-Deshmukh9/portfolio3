@@ -15,8 +15,6 @@ function page() {
   const [isLoading, setIsLoading] = useState(true);
 
   const onLoad = () => {
-    console.log("onLoadingComplete");
-
     setIsLoading(false);
   };
 

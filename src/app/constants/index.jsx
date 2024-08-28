@@ -24,7 +24,7 @@ export const ABOUT = {
   text1:
     "I create dynamic, responsive websites that blend creativity with efficiency",
   text2:
-    "Hello! I'm Aditya Deshmukh, a full-stack developer with a flair for graphic design. I thrive on crafting web experiences that are not only visually stunning but also highly functional and user-friendly. My passion for detail ensures that every project is polished and professional. Beyond coding, I'm an avid explorer of new cultures and cuisines. My curiosity drives me to stay on the cutting edge of technology and design trends, bringing innovative and practical solutions to every challenge. Whether I'm developing a sleek website or diving into the latest tech, I am dedicated to delivering excellence in every project.",
+    "I'm a full-stack developer with a passion for crafting visually stunning and highly functional web experiences. My keen eye for detail ensures every project is polished and professional. Beyond coding, I'm an avid explorer of new cultures and cuisines. This curiosity fuels my commitment to staying at the forefront of technology and design trends, bringing innovative and practical solutions to every challenge. Whether I'm building a sleek website or diving into the latest tech, I'm dedicated to delivering excellence in every project.",
 };
 
 export const projectData = [
