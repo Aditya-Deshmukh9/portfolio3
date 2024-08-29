@@ -42,7 +42,6 @@ function Certificate() {
             height={500}
             width={500}
             className="rounded-md"
-            loading="lazy"
           />
           <h2 className="text-center p-4">{CERTIFICATES.title}</h2>
         </motion.div>

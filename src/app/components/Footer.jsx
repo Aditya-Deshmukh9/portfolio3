@@ -20,6 +20,13 @@ const itemVariants = {
 };
 
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="flex flex-col lg:flex-row justify-between lg:px-32 mt-20 px-5  p-5">
       <motion.div
@@ -52,10 +59,11 @@ function Footer() {
           Aditya Deshmukh.
         </motion.h1>
         <span
+          onClick={scrollToTop}
           className="group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 px-2 py-1 text-sm
          text-gray-100 rounded-md flex items-center justify-center absolute -top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0"
         >
-          <ArrowBigUpDash />
+          <ArrowBigUpDash className="mr-1" />
           Go Top
         </span>
       </div>
