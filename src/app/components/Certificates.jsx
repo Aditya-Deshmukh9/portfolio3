@@ -34,7 +34,7 @@ function Certificate() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={constantVariable}
-          className="w-full p-2 sm:w-1/2 shadow-xl"
+          className="w-full sm:w-1/2 shadow-xl flex flex-col items-center  justify-center"
         >
           <Image
             src={CERTIFICATES.image}
@@ -44,7 +44,7 @@ function Certificate() {
             className="rounded-md"
             loading="lazy"
           />
-          <h2 className="text-center">{CERTIFICATES.title}</h2>
+          <h2 className="text-center p-4">{CERTIFICATES.title}</h2>
         </motion.div>
       </div>
     </div>

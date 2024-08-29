@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
 import { SOCIAL_MEDIA_LINKS } from "../constants";
+import { ArrowBigUpDash } from "lucide-react";
 import { motion } from "framer-motion";
 
 const constantVariable = {
@@ -41,16 +41,23 @@ function Footer() {
           </motion.a>
         ))}
       </motion.div>
-      <div className=" flex flex-row items-center cursor-pointer mt-5 lg:mt-0">
+      <div className="group flex flex-row items-center cursor-pointer mt-5 lg:mt-0 relative">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl  text-indigo-500 font-semibold"
+          className="text-3xl text-indigo-500 font-semibold"
         >
           Aditya Deshmukh.
         </motion.h1>
+        <span
+          className="group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 px-2 py-1 text-sm
+         text-gray-100 rounded-md flex items-center justify-center absolute -top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0"
+        >
+          <ArrowBigUpDash />
+          Go Top
+        </span>
       </div>
     </div>
   );

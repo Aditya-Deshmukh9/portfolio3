@@ -29,7 +29,7 @@ function About() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="mr-24 pl-4 text-lg uppercase leading-loose"
+        className="mr-24 pl-4 text-lg capitalize leading-loose tracking-normal"
       >
         {ABOUT.text2}
       </motion.h3>

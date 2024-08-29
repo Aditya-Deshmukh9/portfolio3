@@ -2,8 +2,13 @@
 import { PROFILE } from "../constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useDisableInspect } from "../hooks/useDisableInspect";
 
 function HeroSection({ onLoad }) {
+  if (process.env.NEXT_PUBLIC_ACCESS_PERMISSION !== "development") {
+    useDisableInspect();
+  }
+
   return (
     <div
       className="min-h-screen flex items-end relative justify-center"

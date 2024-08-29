@@ -119,18 +119,38 @@ export const CERTIFICATES = {
 export const SOCIAL_MEDIA_LINKS = [
   {
     href: "https://x.com/ ",
-    icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
+    icon: (
+      <FaFacebook
+        fontSize={26}
+        className="hover:text-indigo-600 hover:scale-125 duration-75 transition ease-in-out"
+      />
+    ),
   },
   {
     href: "https://x.com/adityadesh937?t=U_Wy5P0J2o2q1tRciLNOqg&s=08",
-    icon: <FaXTwitter fontSize={25} className="hover:opacity-80" />,
+    icon: (
+      <FaXTwitter
+        fontSize={26}
+        className="hover:text-indigo-600 hover:scale-125 duration-75 transition ease-in-out"
+      />
+    ),
   },
   {
     href: "https://github.com/Aditya-Deshmukh9",
-    icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
+    icon: (
+      <FaGithub
+        fontSize={26}
+        className="hover:text-indigo-600 hover:scale-125 duration-75 transition ease-in-out"
+      />
+    ),
   },
   {
     href: "https://www.linkedin.com/in/aditya-deshmukh-878482229",
-    icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
+    icon: (
+      <FaLinkedin
+        fontSize={26}
+        className="hover:text-indigo-600 hover:scale-125 duration-75 transition ease-in-out"
+      />
+    ),
   },
 ];

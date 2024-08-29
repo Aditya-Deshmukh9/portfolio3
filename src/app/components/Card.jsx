@@ -12,7 +12,7 @@ function Card({ image, title, description, githubLink, liveLink, category }) {
           alt={title}
           height={500}
           width={500}
-          className="w-full h-60 object-cover object-left-top rounded-md"
+          className="w-full h-60 object-cover object-left-top rounded-md transition duration-300 ease-in-out hover:scale-110"
         />
         <div className="flex flex-col justify-between  p-4 text-white">
           <h2 className="mb-2 text-2xl font-bold">{title}</h2>

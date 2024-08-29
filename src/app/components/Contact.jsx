@@ -83,7 +83,7 @@ function Contact() {
 
           <button
             type="submit"
-            className="w-full py-3 border mt-4 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white dark:text-white"
+            className="w-full py-3 border mt-4 border-indigo-600 text-indigo-600 hover:bg-indigo-700 hover:text-white dark:text-white"
           >
             Submit
           </button>
