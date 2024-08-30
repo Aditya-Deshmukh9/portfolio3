@@ -9,7 +9,7 @@ import Certificate from "./components/Certificates";
 import Contact from "./components/Contact";
 import LoaderSimple from "./components/LoaderSimple";
 import dynamic from "next/dynamic";
-const Project = dynamic(() => import("./components/Project"), { ssr: false });
+const Project = dynamic(() => import("./components/Project"));
 
 function page() {
   const [isLoading, setIsLoading] = useState(true);

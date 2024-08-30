@@ -1,43 +1,62 @@
-import Image from "next/image";
-import Link from "next/link";
 import { BiLink } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
+import Image from "./Image";
+import Link from "next/link";
 
 function Card({ image, title, description, githubLink, liveLink, category }) {
   return (
-    <div className="m-4 block p-2 max-w-sm bg-slate-900 overflow-hidden rounded-md">
-      <div className="relative">
+    <>
+      {/* <Link href="/"></Link> */}
+      <div className="relative h-60">
+        {/* <Link href="#"> */}
         <Image
-          src={image}
+          path={image}
           alt={title}
-          height={500}
-          width={500}
-          className="w-full h-60 object-cover object-left-top rounded-md transition duration-300 ease-in-out hover:scale-110"
+          transformation={[
+            {
+              height: "240px",
+              width: "full",
+            },
+          ]}
+          className="transition duration-300 ease-in-out hover:scale-110 object-cover object-left-top"
         />
-        <div className="flex flex-col justify-between  p-4 text-white">
-          <h2 className="mb-2 text-2xl font-bold">{title}</h2>
-          <p className="mb-4 text-sm font-medium">{category}</p>
-          <p className="mb-4 text-sm font-medium">{description}</p>
-          <div className="flex justify-between items-center">
-            <Link
-              href={githubLink}
-              target="_blank"
-              className="border-indigo-700 border px-2 py-1 flex gap-x-2 items-center rounded-lg "
-            >
-              <FaGithub size={18} className="hover:text-indigo-600" />
-            </Link>
-            <Link
-              href={liveLink}
-              target="_blank"
-              className="bg-indigo-700 flex gap-x-2 items-center px-2 py-1 rounded-lg text-sm"
-            >
-              LiveLink
-              <BiLink />
-            </Link>
-          </div>
+        {/* </Link> */}
+        <div className="text-xs absolute tracking-tight lowercase top-0 right-0 bg-indigo-700 rounded-lg px-2 py-1 text-white mt-3 mr-3">
+          {category}
         </div>
       </div>
-    </div>
+      {/* title and description */}
+      <div className="px-6 py-4 mb-auto">
+        <Link
+          href="#"
+          className="font-medium text-lg  hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
+        >
+          {title}
+        </Link>
+        <p className="text-gray-500 text-sm">{description}</p>
+      </div>
+
+      {/* links */}
+      <div className="px-6 py-3 flex flex-row items-center justify-between">
+        <Link
+          href={githubLink}
+          target="_black"
+          className="py-1 text-xs font-regular mr-1 flex flex-row items-center"
+        >
+          <FaGithub size={18} className="hover:text-indigo-600" />
+          <span className="ml-1">Github</span>
+        </Link>
+
+        <Link
+          href={liveLink}
+          target="_black"
+          className="py-1 text-xs bg-blue-700 rounded-xl px-3 font-regular mr-1 flex flex-row items-center"
+        >
+          <BiLink />
+          <span className="ml-1">LiveLink</span>
+        </Link>
+      </div>
+    </>
   );
 }
 

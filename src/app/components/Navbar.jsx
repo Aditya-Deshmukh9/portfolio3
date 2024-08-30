@@ -40,7 +40,7 @@ function Navbar() {
             <div className="">
               <Link href="/">
                 <Image
-                  src="/assets/ani-logo.gif"
+                  src="/ani-logo.gif"
                   alt="logo"
                   width={90}
                   height={100}
@@ -67,12 +67,12 @@ function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="rounded-lg backdrop-blur-md lg:hidden">
+        <div className="rounded-xl backdrop-blur-md lg:hidden">
           <div className="flex items-center justify-between">
             <div className="">
               <Link href="#">
                 <Image
-                  src="/assets/ani-logo.gif"
+                  src="/ani-logo.gif"
                   alt="logo"
                   width={90}
                   height={100}

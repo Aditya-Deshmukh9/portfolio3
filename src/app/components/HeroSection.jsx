@@ -1,8 +1,8 @@
 "use client";
 import { PROFILE } from "../constants";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useDisableInspect } from "../hooks/useDisableInspect";
+import Image from "./Image";
 
 function HeroSection({ onLoad }) {
   if (process.env.NEXT_PUBLIC_ACCESS_PERMISSION !== "development") {
@@ -15,15 +15,12 @@ function HeroSection({ onLoad }) {
       id="Hero"
     >
       <Image
-        src="/assets/profilepic.webp"
+        path="profilepic.webp"
         alt={PROFILE.name}
-        height={3936}
-        width={2624}
         onLoad={onLoad}
+        width={3963}
+        height={2624}
         className="absolute inset-0 z-10 h-full w-full object-cover"
-        // initial={{ opacity: 0 }}
-        // animate={{ opacity: 1 }}
-        // transition={{ duration: 1 }}
       />
       <motion.div
         className="absolute inset-0 z-10 bg-gradient-to-b from-transparent from-60% to-black lg:from-30%"

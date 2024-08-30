@@ -30,7 +30,7 @@ export const ABOUT = {
 export const projectData = [
   {
     title: "Full Stack Grocery Store",
-    image: "/assets/project4.webp",
+    image: "project4.webp",
     category: "Full Stack",
     description:
       "This project is an online grocery store application built with Next.js, Tailwind CSS, and Shadcn UI. It utilizes Razorpay Payment Gateway for processing online payments and Axios for making HTTP requests. Check it out!",
@@ -39,7 +39,7 @@ export const projectData = [
   },
   {
     title: "Live Forecast Weather",
-    image: "/assets/project3.webp",
+    image: "project3.webp",
     category: "Frontend",
     description:
       "Live Forecast Weather app built with MERN stack, integrating OpenweatherApi for real-time updates, with 100+ regular users",
@@ -48,7 +48,7 @@ export const projectData = [
   },
   {
     title: "E-Cart",
-    image: "/assets/project2.webp",
+    image: "project2.webp",
     category: "Frontend",
     description:
       "Using React Js, Tailwind css and Context Api for State management. Here I create Full Cart functionality, product add in Search the products etc",
@@ -57,7 +57,7 @@ export const projectData = [
   },
   {
     title: "ContentGenie",
-    image: "/assets/project1.webp",
+    image: "project1.webp",
     category: "Full Stack",
     description:
       "Using React Js, Typescript, Tailwind css and Redux Toolkit for State management. Here I create Full Ai Content Genrator Dashboard with response edit functionality",
@@ -113,7 +113,7 @@ export const SKILLS = [
 
 export const CERTIFICATES = {
   title: "The Complete 2023 Web Development Bootcamp",
-  image: "/assets/udemyCertificate.webp",
+  image: "udemyCertificate.webp",
 };
 
 export const SOCIAL_MEDIA_LINKS = [

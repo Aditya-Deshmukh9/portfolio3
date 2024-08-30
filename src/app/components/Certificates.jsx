@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
 import { CERTIFICATES } from "../constants/index.jsx";
 import { motion } from "framer-motion";
-import Image from "next/image.js";
+import Image from "./Image.jsx";
 
 const constantVariable = {
   hidden: { opacity: 0, y: 20 },
@@ -37,11 +36,11 @@ function Certificate() {
           className="w-full sm:w-1/2 shadow-xl flex flex-col items-center  justify-center"
         >
           <Image
-            src={CERTIFICATES.image}
+            path={CERTIFICATES.image}
             alt={CERTIFICATES.title}
-            height={500}
-            width={500}
-            className="rounded-md"
+            height={952}
+            width={1280}
+            className="rounded-md object-cover"
           />
           <h2 className="text-center p-4">{CERTIFICATES.title}</h2>
         </motion.div>
