@@ -47,6 +47,23 @@ export const projectData = [
     liveLink: "https://full-stack-grocery-store-aditya.vercel.app/",
   },
   {
+    title: "Full Stack Ecommerce",
+    image: "ecommerce.png",
+    category: "Full Stack",
+    description:
+      "Our E-commerce Website offers a seamless shopping experience with a wide range of products, secure payments, detailed descriptions, and easy navigation. Create an account to track orders, save favorites, and access exclusive discounts.",
+    githubLink: "https://github.com/Aditya-Deshmukh9/Ecommerce",
+    liveLink: "https://ecom-colab-a.vercel.app/",
+  },
+  {
+    title: "Walmart Clone",
+    image: "walmart.png",
+    category: "Frontend",
+    description: "Walmart clone with Nextjs, Zustand, tailwind css, shadcn UI",
+    githubLink: "https://github.com/Aditya-Deshmukh9/walmart-clone",
+    liveLink: "https://walmartclone-by-aditya.vercel.app/",
+  },
+  {
     title: "Live Forecast Weather",
     image: "project3.webp",
     category: "Frontend",
@@ -118,7 +135,8 @@ export const CERTIFICATES = {
 
 export const SOCIAL_MEDIA_LINKS = [
   {
-    href: "https://x.com/ ",
+    href: "https://x.com/",
+    ariaLabel: "Visit our Facebook page", // Added aria-label
     icon: (
       <FaFacebook
         fontSize={26}
@@ -128,6 +146,7 @@ export const SOCIAL_MEDIA_LINKS = [
   },
   {
     href: "https://x.com/adityadesh937?t=U_Wy5P0J2o2q1tRciLNOqg&s=08",
+    ariaLabel: "Visit our Twitter page", // Added aria-label
     icon: (
       <FaXTwitter
         fontSize={26}
@@ -137,6 +156,7 @@ export const SOCIAL_MEDIA_LINKS = [
   },
   {
     href: "https://github.com/Aditya-Deshmukh9",
+    ariaLabel: "Visit our GitHub profile", // Added aria-label
     icon: (
       <FaGithub
         fontSize={26}
@@ -146,6 +166,7 @@ export const SOCIAL_MEDIA_LINKS = [
   },
   {
     href: "https://www.linkedin.com/in/aditya-deshmukh-878482229",
+    ariaLabel: "Visit our LinkedIn profile", // Added aria-label
     icon: (
       <FaLinkedin
         fontSize={26}

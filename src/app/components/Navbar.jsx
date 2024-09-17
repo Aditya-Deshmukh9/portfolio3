@@ -86,6 +86,7 @@ function Navbar() {
               <button
                 className="focus:outline-none lg:hidden"
                 onClick={toggleMenuOpen}
+                aria-label="Open Menu"
               >
                 {isMobileMenuOpen ? (
                   <FaTimes className="m-2 h-6 w-5" />

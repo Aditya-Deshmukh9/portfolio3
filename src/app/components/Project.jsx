@@ -3,10 +3,6 @@ import React from "react";
 import Card from "./Card";
 import { projectData } from "../constants";
 import { motion } from "framer-motion";
-import Image from "./Image";
-import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import { BiLink } from "react-icons/bi";
 
 const constantVariable = {
   hidden: { opacity: 0, y: -20 },

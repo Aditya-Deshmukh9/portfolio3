@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-black text-white;
+  }
   .section-title {
     @apply mb-12 mt-20 text-center text-4xl;
   }

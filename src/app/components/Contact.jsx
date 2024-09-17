@@ -41,6 +41,7 @@ function Contact() {
               placeholder="Username"
               required
               autoComplete="on"
+              aria-required="true"
               className="w-full p-2 border-grey border-2 rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-slate-800 dark:text-white"
             />
           </div>
@@ -49,7 +50,6 @@ function Contact() {
             <label
               htmlFor="email"
               className="block text-gray-600 dark:text-white mb-2"
-              aria-required
             >
               Email
             </label>
@@ -59,6 +59,7 @@ function Contact() {
               autoComplete="on"
               required
               placeholder="Email"
+              aria-required="true"
               className="w-full p-3 border-grey border-2 rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-slate-800 dark:text-white"
             />
           </div>
@@ -68,7 +69,7 @@ function Contact() {
               htmlFor="message"
               className="block mb-3 text-gray-600 dark:text-white"
             >
-              message
+              Message
             </label>
             <textarea
               name="message"
@@ -77,6 +78,7 @@ function Contact() {
               cols={30}
               rows={6}
               placeholder="Type Message here 🫡"
+              aria-required="true"
               className="w-full p-3 border-2 border-grey rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-slate-800 dark:text-white"
             ></textarea>
           </div>

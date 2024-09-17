@@ -9,7 +9,10 @@ import Certificate from "./components/Certificates";
 import Contact from "./components/Contact";
 import LoaderSimple from "./components/LoaderSimple";
 import dynamic from "next/dynamic";
-const Project = dynamic(() => import("./components/Project"));
+import { LoaderCircleIcon } from "lucide-react";
+const Project = dynamic(() => import("./components/Project"), {
+  loading: () => <LoaderCircleIcon className="animate-spin" />,
+});
 
 function page() {
   const [isLoading, setIsLoading] = useState(true);

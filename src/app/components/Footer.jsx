@@ -42,6 +42,7 @@ function Footer() {
             key={index}
             target="_blank"
             href={link.href}
+            aria-label={link.ariaLabel}
             rel="noopener noreferrer"
           >
             {link.icon}
