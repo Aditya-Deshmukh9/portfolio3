@@ -36,7 +36,7 @@ function About() {
       </motion.h3>
       <div className="p-5 flex items-center justify-center">
         <Link
-          href="https://drive.google.com/file/d/1xqiqHEF0eueC7_E1pU83z1_DfQ2GiWR_/view?usp=sharing"
+          href="https://drive.google.com/file/d/1e7NPwjcQLUJVumEgxkUCiUNcIg7PlyuB/view?usp=sharing"
           target="_blank"
           className="group p-5 cursor-pointer relative text-xl font-normal border-0 flex items-center justify-center
         bg-transparent text-indigo-500 h-auto w-[170px] overflow-hidden transition-all duration-100"
