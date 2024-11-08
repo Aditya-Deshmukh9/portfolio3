@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import {  useAnimation } from "framer-motion";
 
 function LoaderSimple({ onFinish }) {
   const [loading, setLoading] = useState(true);
@@ -32,7 +32,7 @@ function LoaderSimple({ onFinish }) {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black">
-      <span className="loader"></span>;
+      <span className="loader"></span>
     </div>
   );
 }
