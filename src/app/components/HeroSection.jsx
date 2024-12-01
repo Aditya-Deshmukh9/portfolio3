@@ -2,9 +2,10 @@
 import { PROFILE } from "../constants";
 import { motion } from "framer-motion";
 import { useDisableInspect } from "../hooks/useDisableInspect";
-import Image from "./Image";
+import Image from "next/image";
+import profilepic from "@/public/profilepic.webp";
 
-function HeroSection({ onLoad }) {
+function HeroSection() {
   if (process.env.NEXT_PUBLIC_ACCESS_PERMISSION !== "development") {
     useDisableInspect();
   }
@@ -15,11 +16,12 @@ function HeroSection({ onLoad }) {
       id="Hero"
     >
       <Image
-        path="profilepic.webp"
+        src={profilepic}
         alt={PROFILE.name}
-        onLoad={onLoad}
-        width={3963}
-        height={2624}
+        width={4000}
+        height={2700}
+        placeholder="blur"
+        priority
         className="absolute inset-0 z-10 h-full w-full object-cover"
       />
       <motion.div
