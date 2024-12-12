@@ -76,7 +76,6 @@ function Navbar() {
                   alt="logo"
                   width={90}
                   height={100}
-                  priority={true}
                   style={{ width: "120px", height: "auto" }}
                   className="m-2"
                 />
