@@ -128,10 +128,28 @@ export const SKILLS = [
   },
 ];
 
-export const CERTIFICATES = {
-  title: "The Complete 2023 Web Development Bootcamp",
-  image: "udemyCertificate.webp",
-};
+export const CERTIFICATES = [
+  {
+    title: "The Complete 2023 Web Development Bootcamp",
+    image: "udemyCertificate.webp",
+  },
+  {
+    title: "JavaScript Course",
+    image: "js.jpg",
+  },
+  {
+    title: "Full Stack Development Course",
+    image: "letbigin.jpg",
+  },
+  {
+    title: "HTML & CSS Course",
+    image: "htmlcss.jpg",
+  },
+  {
+    title: "Git Course",
+    image: "git.jpg",
+  },
+];
 
 export const SOCIAL_MEDIA_LINKS = [
   {

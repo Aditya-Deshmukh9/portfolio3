@@ -36,7 +36,7 @@ function Navbar() {
       <nav className="fixed left-0 right-0 top-4 z-50">
         {/* Deskstop Menu */}
         <div className="mx-auto hidden max-w-2xl items-center justify-center rounded-lg bg-black/20 py-3 backdrop-blur-md lg:flex">
-          <div className="flex justify-center items-center gap-6">
+          <div className="flex items-center justify-center gap-6">
             <div className="">
               <Link href="/">
                 <Image
@@ -76,7 +76,7 @@ function Navbar() {
                   alt="logo"
                   width={90}
                   height={100}
-                  priority={true}
+                  priority="true"
                   style={{ width: "120px", height: "auto" }}
                   className="m-2"
                 />

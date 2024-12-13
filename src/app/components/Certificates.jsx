@@ -1,7 +1,16 @@
 "use client";
-import { CERTIFICATES } from "../constants/index.jsx";
 import { motion } from "framer-motion";
-import Image from "./Image.jsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+
+// import required modules
+import { EffectCards, Autoplay } from "swiper/modules";
+import React from "react";
+import { CERTIFICATES } from "../constants";
+import Image from "./Image";
 
 const constantVariable = {
   hidden: { opacity: 0, y: 20 },
@@ -27,24 +36,34 @@ function Certificate() {
       >
         Certificates
       </motion.h2>
-      <div className="mx-auto flex items-center justify-center py-6 max-w-6xl">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={constantVariable}
-          className="w-full sm:w-1/2 shadow-xl flex flex-col items-center  justify-center"
+      {/* Caursoul */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={constantVariable}
+        className="p-3 sm:p-1"
+      >
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards, Autoplay]}
+          autoplay={{ delay: 2000, disableOnInteraction: true }}
+          className="mySwiper h-[20rem] max-w-md sm:h-[33rem] sm:max-w-2xl"
         >
-          <Image
-            path={CERTIFICATES.image}
-            alt={CERTIFICATES.title}
-            height={952}
-            width={1280}
-            className="rounded-md object-cover"
-          />
-          <h2 className="text-center p-4">{CERTIFICATES.title}</h2>
-        </motion.div>
-      </div>
+          {CERTIFICATES.map((elem, index) => (
+            <SwiperSlide key={index}>
+              <Image
+                path={elem.image}
+                alt={elem.title}
+                height={952}
+                width={1280}
+                className="rounded-md object-cover pb-7"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </motion.div>
     </div>
   );
 }
