@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 
 // import required modules
-import { EffectCards } from "swiper/modules";
+import { EffectCards, Autoplay } from "swiper/modules";
 import React from "react";
 import { CERTIFICATES } from "../constants";
 import Image from "./Image";
@@ -47,7 +47,8 @@ function Certificate() {
         <Swiper
           effect={"cards"}
           grabCursor={true}
-          modules={[EffectCards]}
+          modules={[EffectCards, Autoplay]}
+          autoplay={{ delay: 2000, disableOnInteraction: true }}
           className="mySwiper h-[20rem] max-w-md sm:h-[33rem] sm:max-w-2xl"
         >
           {CERTIFICATES.map((elem, index) => (
