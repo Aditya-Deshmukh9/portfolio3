@@ -1,18 +1,16 @@
 "use client";
 import { PROFILE } from "../constants";
 import { motion } from "framer-motion";
-import { useDisableInspect } from "../hooks/useDisableInspect";
 import Image from "next/image";
 import profilepic from "@/public/profilepic.webp";
+import useDisableInspect from "../hooks/useDisableInspect";
 
 function HeroSection() {
-  if (process.env.NEXT_PUBLIC_ACCESS_PERMISSION !== "development") {
-    useDisableInspect();
-  }
+  // useDisableInspect();
 
   return (
     <div
-      className="min-h-screen flex items-end relative justify-center"
+      className="relative flex min-h-screen items-end justify-center"
       id="Hero"
     >
       <Image
@@ -31,7 +29,7 @@ function HeroSection() {
         transition={{ duration: 1 }}
       ></motion.div>
       <motion.div
-        className="z-20  mx-4 max-w-3xl pb-20"
+        className="z-20 mx-4 max-w-3xl pb-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
