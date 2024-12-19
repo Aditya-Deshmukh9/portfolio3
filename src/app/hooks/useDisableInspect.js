@@ -6,7 +6,7 @@ function ctrlShiftKey(e, keyCode) {
   return e.ctrlKey && e.shiftKey && e.key === keyCode;
 }
 
-export const useDisableInspect = () => {
+const useDisableInspect = () => {
   useEffect(() => {
     const disableContextMenu = (e) => e.preventDefault();
     document.addEventListener("contextmenu", disableContextMenu);
@@ -32,3 +32,5 @@ export const useDisableInspect = () => {
     };
   }, []);
 };
+
+export default useDisableInspect;

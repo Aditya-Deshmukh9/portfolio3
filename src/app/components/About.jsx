@@ -21,18 +21,18 @@ function About() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="p-4 text-6xl uppercase lg:text-[8rem]"
+        className="p-1 text-6xl uppercase lg:p-4 lg:text-[8rem]"
       >
-        {ABOUT.text1}
+        <HighlightText text={ABOUT.text1} />
       </motion.h3>
       <motion.h3
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="mr-24 pl-4 text-lg capitalize leading-loose tracking-normal"
+        className="mr-24 pl-2 text-lg capitalize leading-loose tracking-normal lg:pl-4"
       >
-        {ABOUT.text2}
+        <HighlightText text={ABOUT.text2} />
       </motion.h3>
       <div className="flex items-center justify-center p-5">
         <Link
@@ -56,5 +56,20 @@ function About() {
     </div>
   );
 }
+
+const HighlightText = ({ text }) => {
+  return (
+    <span className="relative">
+      {text.split(" ").map((word, index) => (
+        <span
+          key={index}
+          className="relative inline-block transition-colors duration-300 hover:text-yellow-300"
+        >
+          {word}&nbsp;
+        </span>
+      ))}
+    </span>
+  );
+};
 
 export default About;
