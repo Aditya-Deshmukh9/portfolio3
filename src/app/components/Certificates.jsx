@@ -58,7 +58,7 @@ function Certificate() {
                 alt={elem.title}
                 height={952}
                 width={1280}
-                className="rounded-md object-cover pb-7"
+                className="rounded-md object-cover pb-1"
               />
             </SwiperSlide>
           ))}

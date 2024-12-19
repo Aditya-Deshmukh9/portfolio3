@@ -57,7 +57,7 @@ function Navbar() {
               {NAVIGATION_LINKS.map((item, index) => (
                 <Link
                   key={index}
-                  className="text-sm hover:text-indigo-400"
+                  className="text-sm hover:text-[#7ebf77]"
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
                 >
