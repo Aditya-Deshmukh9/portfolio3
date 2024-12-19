@@ -12,11 +12,6 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {
-        protest: "var(--font-protest)",
-        jetbrains: "var(--font-jetbrains)",
-        canela: "var(--font-canela)",
-      },
     },
   },
   plugins: [{ plugins: ["prettier-plugin-tailwindcss"] }],
