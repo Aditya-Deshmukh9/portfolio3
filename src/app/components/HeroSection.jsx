@@ -6,7 +6,7 @@ import profilepic from "@/public/profilepic.webp";
 import useDisableInspect from "../hooks/useDisableInspect";
 
 function HeroSection() {
-  // useDisableInspect();
+  useDisableInspect();
 
   return (
     <div

@@ -36,7 +36,7 @@ function About() {
       </motion.h3>
       <div className="flex items-center justify-center p-5">
         <Link
-          href="https://drive.google.com/file/d/1e7NPwjcQLUJVumEgxkUCiUNcIg7PlyuB/view?usp=sharing"
+          href={process.env.NEXT_PUBLIC_RESUME_LINK}
           target="_blank"
           className="group relative flex h-auto w-[170px] cursor-pointer items-center justify-center overflow-hidden border-0 bg-transparent p-5 text-xl font-normal text-indigo-500 transition-all duration-100"
         >
