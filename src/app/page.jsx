@@ -8,12 +8,14 @@ import HeroSection from "./components/HeroSection";
 import Certificate from "./components/Certificates";
 import Contact from "./components/Contact";
 import dynamic from "next/dynamic";
+import UpperScroller from "./components/UpperScroller";
 const Project = dynamic(() => import("./components/Project"), { ssr: false });
 
 function page() {
   return (
     <>
-      <div className="antialiased overflow-x-hidden bg-black text-gray-200 tracking-tighter">
+      <div className="overflow-x-hidden scroll-smooth bg-black tracking-tighter text-gray-200 antialiased">
+        <UpperScroller />
         <Navbar />
         <HeroSection />
         <About />
