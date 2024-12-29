@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 import UpperScroller from "./components/UpperScroller";
 const Project = dynamic(() => import("./components/Project"), { ssr: false });
 
-function page() {
+function Homepage() {
   return (
     <>
       <div className="overflow-x-hidden scroll-smooth bg-black tracking-tighter text-gray-200 antialiased">
@@ -29,4 +29,4 @@ function page() {
   );
 }
 
-export default page;
+export default Homepage;

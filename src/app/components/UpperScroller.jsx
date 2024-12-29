@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useSpring, useScroll } from "motion/react";
-import React from "react";
 
 function UpperScroller() {
   const { scrollYProgress } = useScroll();

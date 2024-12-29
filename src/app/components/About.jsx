@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 function About() {
+  const resumeLink = process.env.NEXT_PUBLIC_RESUME_LINK;
   return (
     <div className="container mx-auto" id="about">
       <motion.h2
@@ -36,7 +37,7 @@ function About() {
       </motion.h3>
       <div className="flex items-center justify-center p-5">
         <Link
-          href={process.env.NEXT_PUBLIC_RESUME_LINK}
+          href={resumeLink}
           target="_blank"
           className="group relative flex h-auto w-[170px] cursor-pointer items-center justify-center overflow-hidden border-0 bg-transparent p-5 text-xl font-normal text-indigo-500 transition-all duration-100"
         >
