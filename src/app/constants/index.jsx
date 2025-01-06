@@ -85,44 +85,44 @@ export const projectData = [
 
 export const SKILLS = [
   {
-    icon: <IoLogoHtml5 className="text-4xl lg:text-6xl text-orange-500" />,
+    icon: <IoLogoHtml5 className="text-4xl text-orange-500 lg:text-6xl" />,
     name: "Html",
     experience: "1+ years",
   },
   {
-    icon: <FaCss3Alt className="text-4xl lg:text-6xl text-sky-400" />,
+    icon: <FaCss3Alt className="text-4xl text-sky-400 lg:text-6xl" />,
     name: "CSS",
     experience: "1+ years",
   },
   {
-    icon: <IoLogoJavascript className="text-4xl lg:text-6xl text-yellow-300" />,
+    icon: <IoLogoJavascript className="text-4xl text-yellow-300 lg:text-6xl" />,
     name: "Javascript",
     experience: "1+ years",
   },
   {
     icon: (
-      <SiTypescript className="text-4xl lg:text-6xl text-blue-500 bg-white rounded-md" />
+      <SiTypescript className="rounded-md bg-white text-4xl text-blue-500 lg:text-6xl" />
     ),
     name: "Typescript",
     experience: "6+ months",
   },
   {
-    icon: <RiReactjsLine className="text-4xl lg:text-6xl text-cyan-400" />,
+    icon: <RiReactjsLine className="text-4xl text-cyan-400 lg:text-6xl" />,
     name: "React",
     experience: "10+ months",
   },
   {
-    icon: <TbBrandNextjs className="text-4xl lg:text-6xl text-white" />,
+    icon: <TbBrandNextjs className="text-4xl text-white lg:text-6xl" />,
     name: "Next.js",
     experience: "6+ months",
   },
   {
-    icon: <SiMongodb className="text-4xl lg:text-6xl text-green-600" />,
+    icon: <SiMongodb className="text-4xl text-green-600 lg:text-6xl" />,
     name: "MongoDB",
     experience: "6+ months",
   },
   {
-    icon: <FaNodeJs className="text-4xl lg:text-6xl text-green-600" />,
+    icon: <FaNodeJs className="text-4xl text-green-600 lg:text-6xl" />,
     name: "Node.js",
     experience: "6+ months",
   },
@@ -155,41 +155,21 @@ export const SOCIAL_MEDIA_LINKS = [
   {
     href: "https://x.com/",
     ariaLabel: "Visit our Facebook page", // Added aria-label
-    icon: (
-      <FaFacebook
-        fontSize={26}
-        className="hover:text-indigo-600 hover:scale-125 duration-75 transition ease-in-out"
-      />
-    ),
+    icon: <FaFacebook fontSize={26} className="social-icon" />,
   },
   {
     href: "https://x.com/adityadesh937?t=U_Wy5P0J2o2q1tRciLNOqg&s=08",
     ariaLabel: "Visit our Twitter page", // Added aria-label
-    icon: (
-      <FaXTwitter
-        fontSize={26}
-        className="hover:text-indigo-600 hover:scale-125 duration-75 transition ease-in-out"
-      />
-    ),
+    icon: <FaXTwitter fontSize={26} className="social-icon" />,
   },
   {
     href: "https://github.com/Aditya-Deshmukh9",
     ariaLabel: "Visit our GitHub profile", // Added aria-label
-    icon: (
-      <FaGithub
-        fontSize={26}
-        className="hover:text-indigo-600 hover:scale-125 duration-75 transition ease-in-out"
-      />
-    ),
+    icon: <FaGithub fontSize={26} className="social-icon" />,
   },
   {
     href: "https://www.linkedin.com/in/aditya-deshmukh-878482229",
     ariaLabel: "Visit our LinkedIn profile", // Added aria-label
-    icon: (
-      <FaLinkedin
-        fontSize={26}
-        className="hover:text-indigo-600 hover:scale-125 duration-75 transition ease-in-out"
-      />
-    ),
+    icon: <FaLinkedin className="social-icon" />,
   },
 ];

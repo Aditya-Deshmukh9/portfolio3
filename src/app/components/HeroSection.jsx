@@ -1,9 +1,10 @@
 "use client";
-import { PROFILE } from "../constants";
+import { PROFILE, SOCIAL_MEDIA_LINKS } from "../constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import profilepic from "@/public/profilepic.webp";
 import useDisableInspect from "../hooks/useDisableInspect";
+import { constantVariable, itemVariants } from "./Footer";
 
 function HeroSection() {
   useDisableInspect();
@@ -22,12 +23,33 @@ function HeroSection() {
         priority
         className="absolute inset-0 z-10 h-full w-full object-cover"
       />
+
       <motion.div
         className="absolute inset-0 z-10 bg-gradient-to-b from-transparent from-60% to-black lg:from-30%"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       ></motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={constantVariable}
+        className="absolute right-4 top-1/3 z-30 flex flex-col gap-6 md:right-24"
+      >
+        {SOCIAL_MEDIA_LINKS.map((link, index) => (
+          <motion.a
+            variants={itemVariants}
+            key={index}
+            target="_blank"
+            href={link.href}
+            aria-label={link.ariaLabel}
+            rel="noopener noreferrer"
+          >
+            {link.icon}
+          </motion.a>
+        ))}
+      </motion.div>
       <motion.div
         className="z-20 mx-4 max-w-3xl pb-20"
         initial={{ opacity: 0 }}
