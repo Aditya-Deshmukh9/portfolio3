@@ -3,21 +3,23 @@
 import { useEffect } from "react";
 
 function ctrlShiftKey(e, keyCode) {
-  return e.ctrlKey && e.shiftKey && e.key === keyCode;
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
 }
 
 const useDisableInspect = () => {
   useEffect(() => {
+    // Disable right-click
     const disableContextMenu = (e) => e.preventDefault();
     document.addEventListener("contextmenu", disableContextMenu);
 
+    // Disable inspect element shortcuts
     const disableInspectShortcuts = (e) => {
       if (
-        e.key === "F12" ||
+        e.keyCode === 123 || // F12
         ctrlShiftKey(e, "I") ||
         ctrlShiftKey(e, "J") ||
         ctrlShiftKey(e, "C") ||
-        (e.ctrlKey && e.key === "U")
+        (e.ctrlKey && e.keyCode === "U".charCodeAt(0))
       ) {
         e.preventDefault();
         return false;
