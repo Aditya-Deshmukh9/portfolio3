@@ -233,7 +233,7 @@ p {
   display: inline-block;
   margin: 0 2px;
 }
- 
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 4px;
@@ -243,3 +243,4 @@ p {
   background: gray;
   border-radius: 3px;
 
+}
