@@ -236,6 +236,6 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4338CA;
+  background: gray;
   border-radius: 3px;
 }
