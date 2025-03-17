@@ -10,6 +10,10 @@
   .section-title {
     @apply mb-12 mt-20 text-center text-4xl;
   }
+
+  .social-icon {
+    @apply h-6 w-6 transition duration-75 ease-in-out hover:scale-125 hover:text-[#51D94E] md:h-9 md:w-9;
+  }
 }
 
 .loader {
@@ -229,7 +233,7 @@ p {
   display: inline-block;
   margin: 0 2px;
 }
-
+ 
 ::-webkit-scrollbar {
   width: 6px;
   height: 4px;
@@ -238,4 +242,4 @@ p {
 ::-webkit-scrollbar-thumb {
   background: gray;
   border-radius: 3px;
-}
+
