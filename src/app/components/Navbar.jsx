@@ -5,11 +5,10 @@ import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image.js";
-import useScrollDirection from "../hooks/useScrollDirection.jsx";
 
 function Navbar() {
   const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false);
-  const { isScrollingUp, isScrollStoped } = useScrollDirection();
+  const [activeLink, setActiveLink] = useState(null);
 
   const toggleMenuOpen = () => {
     setisMobileMenuOpen(!isMobileMenuOpen);
@@ -17,6 +16,7 @@ function Navbar() {
 
   const handleLinkClick = (e, href) => {
     e.preventDefault();
+    setActiveLink(href);
     const targetElement = document.querySelector(href);
 
     if (targetElement) {
@@ -35,7 +35,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-4 z-50 transition-transform duration-300 ${isScrollingUp || isScrollStoped ? "translate-y-0" : "-translate-y-28"}`}
+      className={`fixed left-0 right-0 top-4 z-50 transition-transform duration-300`}
     >
       {/* Deskstop Menu */}
       <div className="mx-auto hidden max-w-2xl items-center justify-center rounded-3xl bg-black/20 py-3 backdrop-blur-md lg:flex">
@@ -57,7 +57,7 @@ function Navbar() {
               {NAVIGATION_LINKS.map((item, index) => (
                 <Link
                   key={index}
-                  className="text-sm hover:text-[#7ebf77]"
+                  className={`text-sm hover:text-[#7ebf77] ${activeLink === item.href ? "rounded-md bg-white px-2 text-gray-900" : ""}`}
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
                 >
@@ -106,7 +106,7 @@ function Navbar() {
                 key={index}
                 href={item.href}
                 onClick={(e) => handleLinkClick(e, item.href)}
-                className="block w-full text-xl font-semibold hover:text-yellow-400"
+                className={`block w-full text-xl font-semibold hover:text-[#7ebf77] ${activeLink === item.href ? "rounded-md bg-white px-2 text-gray-900" : ""}`}
               >
                 {item.label}
               </Link>
