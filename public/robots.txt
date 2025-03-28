@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.adityadeshmukh.online/
+Host: http://localhost:3000/
 
 # Sitemaps
-Sitemap: https://www.adityadeshmukh.online/sitemap.xml
+Sitemap: http://localhost:3000/sitemap.xml

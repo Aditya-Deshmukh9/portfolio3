@@ -39,6 +39,10 @@ function Footer() {
         {SOCIAL_MEDIA_LINKS.map((link, index) => (
           <motion.a
             variants={itemVariants}
+            whileHover={{
+              scaleY: 1.2,
+              transition: { duration: 1 },
+            }}
             key={index}
             target="_blank"
             href={link.href}

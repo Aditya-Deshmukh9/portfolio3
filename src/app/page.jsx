@@ -9,10 +9,8 @@ import HeroSection from "./components/HeroSection";
 import Certificate from "./components/Certificates";
 import Contact from "./components/Contact";
 import dynamic from "next/dynamic";
-import UpperScroller from "./components/UpperScroller";
 
 const Project = dynamic(() => import("./components/Project"), { ssr: true });
-
 
 function Homepage() {
   return (
