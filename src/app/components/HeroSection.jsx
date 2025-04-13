@@ -7,9 +7,7 @@ import useDisableInspect from "../hooks/useDisableInspect";
 import { constantVariable, itemVariants } from "./Footer";
 
 function HeroSection() {
-  if (process.env.NEXT_PUBLIC_ACCESS_PERMISSION === "production") {
     useDisableInspect();
-  }
 
   return (
     <div
