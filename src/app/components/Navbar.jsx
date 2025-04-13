@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NAVIGATION_LINKS } from "../constants/index.jsx";
 import { FaTimes, FaBars } from "react-icons/fa";
 import Link from "next/link";
@@ -9,11 +9,25 @@ import { motion } from "framer-motion";
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
+  const [lastScrollY, setLastScrollY] = useState(0)
+    const [show, setShow] = useState(true)
 
   const toggleMenuOpen = () => {
     setIsMobileMenuOpen((prev) => !prev);
     document.body.style.overflow = isMobileMenuOpen ? "auto" : "hidden";
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY
+      setShow(currentY < lastScrollY || currentY < 10)
+      setLastScrollY(currentY)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
 
   const handleLinkClick = (e, href) => {
     e.preventDefault();
@@ -23,21 +37,28 @@ function Navbar() {
 
     const targetElement = document.querySelector(href);
     if (targetElement) {
-      const offset = -100;
-      const offsetPosition =
-        targetElement.getBoundingClientRect().top + window.scrollY + offset;
+      const headerOffset = window.innerWidth >= 1024 ? 80 : 100; 
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
       });
+
+      window.history.pushState(null, '', href);
     }
   };
 
   return (
-    <nav className="fixed left-0 right-0 z-50 transition-transform sm:top-4">
+    <motion.header 
+      initial={{ y: -20 }}
+      animate={{ y: show ? 0 : -100 }}
+      transition={{ duration: 0.3, delay:0.1, ease: "easeInOut" }}
+      className={`fixed left-0 right-0 z-50 sm:top-4 will-change-transform`}
+    >
       {/* Desktop Menu */}
-      <div className="mx-auto hidden max-w-2xl items-center justify-center rounded-3xl bg-black/20 py-3 backdrop-blur-md lg:flex">
+      <nav className="mx-auto hidden max-w-2xl items-center justify-center rounded-3xl bg-black/20 py-3 backdrop-blur-md lg:flex">
         <div className="flex items-center gap-6">
           <Link href="/">
             <Image
@@ -55,24 +76,22 @@ function Navbar() {
                 key={index}
                 href={item.href}
                 onClick={(e) => handleLinkClick(e, item.href)}
-                className={`text-sm hover:text-[#7ebf77] ${
-                  activeLink === item.href
-                    ? "rounded-md bg-white px-2 text-gray-900"
-                    : ""
-                }`}
+                className={`text-sm hover:text-[#7ebf77] ${activeLink === item.href
+                  ? "rounded-md bg-white px-2 text-gray-900"
+                  : ""
+                  }`}
               >
                 {item.label}
               </Link>
             ))}
           </ul>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Menu */}
-      <div
-        className={`transition-all duration-75 lg:hidden ${
-          isMobileMenuOpen ? "bg-black" : "backdrop-blur-md"
-        }`}
+      <nav
+        className={`transition-all duration-75 lg:hidden ${isMobileMenuOpen ? "bg-black" : "backdrop-blur-md"
+          }`}
       >
         <div className="flex items-center justify-between">
           <Link href="/">
@@ -111,8 +130,8 @@ function Navbar() {
             ))}
           </section>
         )}
-      </div>
-    </nav>
+      </nav>
+    </motion.header>
   );
 }
 

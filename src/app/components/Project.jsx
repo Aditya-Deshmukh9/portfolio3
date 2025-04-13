@@ -47,7 +47,7 @@ function Project() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="rounded overflow-hidden shadow-lg flex flex-col"
+                className="rounded overflow-hidden  flex flex-col shadow-white shadow-sm"
               >
                 <Card
                   image={project.image}
