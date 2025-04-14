@@ -64,13 +64,13 @@ export const projectData = [
     liveLink: "https://walmartclone-by-aditya.vercel.app/",
   },
   {
-    title: "Live Forecast Weather",
-    image: "project3.webp",
+    title: "Weather Forecast",
+    image: "prjimg.webp",
     category: "Frontend",
     description:
-      "Live Forecast Weather app built with MERN stack, integrating OpenweatherApi for real-time updates, with 100+ regular users",
-    githubLink: "https://github.com/Aditya-Deshmukh9/Live-weather-frontend",
-    liveLink: "https://live-weather-frontend.vercel.app/",
+      "A dynamic and responsive weather application built with JavaScript and Tailwind CSS that provides weather data based on the user's location or a searched city.",
+    githubLink: "https://github.com/Aditya-Deshmukh9/weather-forecast-webapp-javascript",
+    liveLink: "https://weather-forecast-internshala.netlify.app/",
   },
   {
     title: "E-Cart",
