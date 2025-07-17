@@ -24,12 +24,9 @@ function HeroSection() {
         className="absolute inset-0 z-10 h-full w-full object-cover"
       />
 
-      <motion.div
+      <div
         className="absolute inset-0 z-10 bg-gradient-to-b from-transparent from-60% to-black lg:from-30%"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      ></motion.div>
+      ></div>
       <motion.div
         initial="hidden"
         whileInView="visible"

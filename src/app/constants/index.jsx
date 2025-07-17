@@ -142,13 +142,9 @@ export const CERTIFICATES = [
     image: "letbigin.jpg",
   },
   {
-    title: "HTML & CSS Course",
-    image: "htmlcss.jpg",
-  },
-  {
-    title: "Git Course",
-    image: "git.jpg",
-  },
+    title:'Full Stack Development Course',
+    image:"Full Stack Development Course"
+  }
 ];
 
 export const SOCIAL_MEDIA_LINKS = [

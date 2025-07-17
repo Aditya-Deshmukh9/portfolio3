@@ -58,7 +58,7 @@ function Navbar() {
       className={`fixed left-0 right-0 z-50 sm:top-4 will-change-transform`}
     >
       {/* Desktop Menu */}
-      <nav className="mx-auto hidden max-w-2xl items-center justify-center rounded-3xl bg-black/20 py-3 backdrop-blur-md lg:flex">
+      <nav className="mx-auto hidden max-w-lg items-center justify-center rounded-3xl bg-white/15 py-3 backdrop-blur-md lg:flex">
         <div className="flex items-center gap-6">
           <Link href="/">
             <Image

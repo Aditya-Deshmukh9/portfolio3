@@ -35,7 +35,7 @@ function About() {
       >
         <HighlightText text={ABOUT.text2} />
       </motion.h3>
-      <div className="flex items-center justify-center p-5">
+      <div className="flex items-center justify-center p-5 animate-bounce">
         <Link
           href={resumeLink}
           target="_blank"

@@ -4,7 +4,7 @@
 
 @layer base {
   body,html {
-    @apply bg-black text-white overflow-x-hidden box-border;
+    @apply  text-white overflow-x-hidden box-border;
   }
 
   .section-title {
