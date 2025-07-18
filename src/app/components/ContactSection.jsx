@@ -35,7 +35,7 @@ const ContactSection = () => {
         e.preventDefault();
         setIsSubmitting(true);
         setSubmitStatus(null);
-        
+
         try {
             // Create FormData object for form submission
             const formDataObj = new FormData();
@@ -101,7 +101,7 @@ const ContactSection = () => {
                         handleSubmit(e);
                     }
                     break;
-                    
+
                 case 'Backspace':
                     const currentInput = inputRefs.current[step];
                     if (e.ctrlKey || (currentInput && currentInput.value === '')) {
@@ -109,17 +109,17 @@ const ContactSection = () => {
                         prevStep();
                     }
                     break;
-                    
+
                 case 'ArrowRight':
                     e.preventDefault();
                     nextStep();
                     break;
-                    
+
                 case 'ArrowLeft':
                     e.preventDefault();
                     prevStep();
                     break;
-                    
+
                 case 'Escape':
                     setFormData({ name: '', email: '', message: '' });
                     setStep(0);
@@ -148,16 +148,16 @@ const ContactSection = () => {
         exit: { opacity: 0, x: -50 }
     };
 
-   
+
     return (
-        <section  id="contact" className='my-36'>
-            <motion.div 
-                 initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          viewport={{ once: true }}
-                ref={containerRef} 
-                tabIndex={0} 
+        <section id="contact" className='my-36'>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                viewport={{ once: true }}
+                ref={containerRef}
+                tabIndex={0}
                 className="max-w-2xl mx-auto p-6 bg-white/10 rounded-lg shadow-2xl focus:outline-none focus:ring-3 focus:ring-purple-400"
             >
                 {/* Success/Error Messages */}
@@ -167,11 +167,10 @@ const ContactSection = () => {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
-                            className={`mb-6 p-4 rounded-lg ${
-                                submitStatus === 'success' 
-                                    ? 'bg-green-100 border border-green-400 text-green-700' 
+                            className={`mb-6 p-4 rounded-lg ${submitStatus === 'success'
+                                    ? 'bg-green-100 border border-green-400 text-green-700'
                                     : 'bg-red-100 border border-red-400 text-red-700'
-                            }`}
+                                }`}
                         >
                             {submitStatus === 'success' ? (
                                 <div className="flex items-center">
@@ -197,19 +196,14 @@ const ContactSection = () => {
                     {stepData.map((_, i) => (
                         <motion.div
                             key={i}
-                            className={`flex-1 py-3 cursor-pointer text-center border-b-4 transition-all duration-300 ${
-                                step === i 
-                                    ? 'border-white text-white font-bold' 
+                            className={`flex-1 py-3 cursor-pointer text-center border-b-4 transition-all duration-300 ${step === i
+                                    ? 'border-white text-white font-bold'
                                     : 'border-transparent text-gray-300 hover:text-white'
-                            }`}
-                            onClick={() => setStep(i)}
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
+                                }`}
                         >
                             <div className="flex items-center justify-center space-x-2">
-                                <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs ${
-                                    step === i ? 'bg-white text-purple-900' : 'bg-gray-600'
-                                }`}>
+                                <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs ${step === i ? 'bg-white text-purple-900' : 'bg-gray-600'
+                                    }`}>
                                     {i + 1}
                                 </span>
                                 <span className="hidden sm:inline">
@@ -243,7 +237,7 @@ const ContactSection = () => {
                                     <label className="block text-sm font-medium text-white mb-2">
                                         {stepData[step].label}
                                     </label>
-                                    
+
                                     {stepData[step].type === 'textarea' ? (
                                         <textarea
                                             ref={el => inputRefs.current[step] = el}
@@ -277,11 +271,10 @@ const ContactSection = () => {
                                 type="button"
                                 onClick={prevStep}
                                 disabled={step === 0}
-                                className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 ${
-                                    step === 0
+                                className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 ${step === 0
                                         ? 'invisible'
                                         : 'bg-gray-300 text-gray-700 hover:bg-gray-400 disabled:opacity-50'
-                                }`}
+                                    }`}
                                 whileHover={step > 0 ? { scale: 1.05 } : {}}
                                 whileTap={step > 0 ? { scale: 0.95 } : {}}
                             >
@@ -293,13 +286,12 @@ const ContactSection = () => {
                                 {stepData.map((_, i) => (
                                     <div
                                         key={i}
-                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                            i === step 
-                                                ? 'bg-purple-500 scale-125' 
-                                                : i < step 
-                                                    ? 'bg-green-500' 
+                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${i === step
+                                                ? 'bg-purple-500 scale-125'
+                                                : i < step
+                                                    ? 'bg-green-500'
                                                     : 'bg-gray-300'
-                                        }`}
+                                            }`}
                                     />
                                 ))}
                             </div>
@@ -309,11 +301,10 @@ const ContactSection = () => {
                                     type="button"
                                     onClick={nextStep}
                                     disabled={!isStepValid()}
-                                    className={`px-6 py-2 rounded-lg font-medium shadow-lg transition-all duration-200 ${
-                                        isStepValid()
+                                    className={`px-6 py-2 rounded-lg font-medium shadow-lg transition-all duration-200 ${isStepValid()
                                             ? 'bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 text-white'
                                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                                    }`}
+                                        }`}
                                     whileHover={isStepValid() ? { scale: 1.05 } : {}}
                                     whileTap={isStepValid() ? { scale: 0.95 } : {}}
                                 >
@@ -323,11 +314,10 @@ const ContactSection = () => {
                                 <motion.button
                                     type="submit"
                                     disabled={!isStepValid() || isSubmitting}
-                                    className={`px-6 py-2 rounded-lg font-medium shadow-lg transition-all duration-200 ${
-                                        isStepValid() && !isSubmitting
+                                    className={`px-6 py-2 rounded-lg font-medium shadow-lg transition-all duration-200 ${isStepValid() && !isSubmitting
                                             ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white'
                                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                                    }`}
+                                        }`}
                                     whileHover={isStepValid() && !isSubmitting ? { scale: 1.05 } : {}}
                                     whileTap={isStepValid() && !isSubmitting ? { scale: 0.95 } : {}}
                                 >
