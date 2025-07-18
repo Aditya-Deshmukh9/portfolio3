@@ -143,7 +143,7 @@ export const CERTIFICATES = [
   },
   {
     title:'Full Stack Development Course',
-    image:"Full Stack Development Course"
+    image:"FSDcertificategraduation_02.jpg"
   }
 ];
 
@@ -169,3 +169,27 @@ export const SOCIAL_MEDIA_LINKS = [
     icon: <FaLinkedin className="social-icon" />,
   },
 ];
+
+ export const stepData = [
+        {
+            field: 'name',
+            type: 'text',
+            label: 'Your Name',
+            placeholder: 'Enter your full name',
+            focusColor: 'focus:ring-blue-500'
+        },
+        {
+            field: 'email',
+            type: 'email',
+            label: 'Your Email',
+            placeholder: 'Enter your email address',
+            focusColor: 'focus:ring-purple-500'
+        },
+        {
+            field: 'message',
+            type: 'textarea',
+            label: 'Your Message',
+            placeholder: 'Tell us about your project...',
+            focusColor: 'focus:ring-pink-500'
+        }
+    ];

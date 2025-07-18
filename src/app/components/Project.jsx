@@ -23,7 +23,6 @@ const itemVariants = {
 
 function Project() {
   return (
-    <>
       <div id="projects">
         <motion.h2
           initial="hidden"
@@ -62,7 +61,7 @@ function Project() {
           </motion.div>
         </div>
       </div>
-    </>
+
   );
 }
 
