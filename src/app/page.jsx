@@ -11,7 +11,7 @@ const ContactSection = dynamic(() => import("./components/ContactSection"), { ss
 
 function Homepage() {
   return (
-    <div className="mt-20 relative">
+    <div className="relative">
       <div className="fixed inset-0 overflow-hidden -z-10">
         <div className="absolute top-[10%] left-[10%] w-[40%] h-[40%] rounded-full bg-green-500/40 filter blur-3xl" />
         <div className="absolute bottom-[10%] right-[10%] w-[40%] h-[40%] rounded-full bg-pink-400/30 filter blur-3xl" />
