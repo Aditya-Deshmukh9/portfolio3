@@ -142,8 +142,8 @@ export const CERTIFICATES = [
     image: "letbigin.jpg",
   },
   {
-    title:'Full Stack Development Course',
-    image:"FSDcertificategraduation_02.jpg"
+    title:'NSDC Full Stack Development Certificate',
+    image:"nsdc-fsd.jpg"
   }
 ];
 
