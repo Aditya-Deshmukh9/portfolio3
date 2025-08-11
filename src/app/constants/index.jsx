@@ -30,57 +30,30 @@ export const ABOUT = {
 export const projectData = [
   {
     title: "ContentGenie",
-    image: "project1.webp",
+    image: "project1.jpg",
     category: "Full Stack",
     description:
-      "Using React Js, Typescript, Tailwind css and Redux Toolkit for State management. Here I create Full Ai Content Genrator Dashboard with response edit functionality",
+      "ContentGenie is a simple tool that helps you quickly generate content for various needs. After generating content, you can easily customize it to match your style..",
     githubLink: "https://github.com/Aditya-Deshmukh9/ai-content-generator",
     liveLink: "https://contentgenie.adityadeshmukh.online/",
-  },
-  {
-    title: "Full Stack Grocery Store",
-    image: "project4.webp",
-    category: "Full Stack",
-    description:
-      "This project is an online grocery store application built with Next.js, Tailwind CSS, and Shadcn UI. It utilizes Razorpay Payment Gateway for processing online payments and Axios for making HTTP requests. Check it out!",
-    githubLink: "https://github.com/Aditya-Deshmukh9/MERN-Grocery-Store",
-    liveLink: "https://full-stack-grocery-store-aditya.vercel.app/",
   },
   {
     title: "Full Stack Ecommerce",
     image: "ecommerce.png",
     category: "Full Stack",
     description:
-      "Our E-commerce Website offers a seamless shopping experience with a wide range of products, secure payments, detailed descriptions, and easy navigation. Create an account to track orders, save favorites, and access exclusive discounts.",
+      "Our E-commerce Website offers a seamless shopping experience with a wide range of products, secure payments, detailed descriptions, and easy navigation. Create an account to track orders, save favorites.",
     githubLink: "https://github.com/Aditya-Deshmukh9/Ecommerce",
     liveLink: "https://ecom-colab-a.vercel.app/",
-  },
-  {
-    title: "Walmart Clone",
-    image: "walmart.png",
-    category: "Frontend",
-    description: "Walmart clone with Nextjs, Zustand, tailwind css, shadcn UI",
-    githubLink: "https://github.com/Aditya-Deshmukh9/walmart-clone",
-    liveLink: "https://walmartclone-by-aditya.vercel.app/",
-  },
-  {
+  }, {
     title: "Weather Forecast",
-    image: "prjimg.webp",
+    image: "project3",
     category: "Frontend",
     description:
       "A dynamic and responsive weather application built with JavaScript and Tailwind CSS that provides weather data based on the user's location or a searched city.",
     githubLink: "https://github.com/Aditya-Deshmukh9/weather-forecast-webapp-javascript",
     liveLink: "https://weather-forecast-internshala.netlify.app/",
-  },
-  {
-    title: "E-Cart",
-    image: "project2.webp",
-    category: "Frontend",
-    description:
-      "Using React Js, Tailwind css and Context Api for State management. Here I create Full Cart functionality, product add in Search the products etc",
-    githubLink: "https://github.com/Aditya-Deshmukh9/E-cart",
-    liveLink: "https://webfoodstore.adityadeshmukh.online/",
-  },
+  }
 ];
 
 export const SKILLS = [
@@ -134,16 +107,8 @@ export const CERTIFICATES = [
     image: "udemyCertificate.webp",
   },
   {
-    title: "JavaScript Course",
-    image: "js.jpg",
-  },
-  {
-    title: "Full Stack Development Course",
-    image: "letbigin.jpg",
-  },
-  {
     title:'Full Stack Development Course',
-    image:"FSDcertificategraduation_02.jpg"
+    image: "nsdc-fsd.jpg"
   }
 ];
 

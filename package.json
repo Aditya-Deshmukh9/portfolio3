@@ -7,22 +7,22 @@
     "postbuild": "next-sitemap",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "NEXT_PUBLIC_ANALYZE=true npm run build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.4.6",
     "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^11.3.30",
     "imagekitio-next": "^1.0.0",
     "lenis": "^1.2.3",
     "lint": "^0.8.19",
-    "lucide-react": "^0.436.0",
-    "motion": "^11.15.0",
+    "lucide-react": "^0.539.0",
     "next": "15.1.4",
     "next-sitemap": "^4.2.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-icons": "^5.4.0",
-    "sharp": "^0.33.5",
     "swiper": "^11.1.15"
   },
   "devDependencies": {

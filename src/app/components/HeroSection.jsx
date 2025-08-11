@@ -3,12 +3,10 @@ import { PROFILE, SOCIAL_MEDIA_LINKS } from "../constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import profilepic from "@/public/profilepic.webp";
-import useDisableInspect from "../hooks/useDisableInspect";
 import { constantVariable, itemVariants } from "./Footer";
 
-function HeroSection() {
-    useDisableInspect();
 
+function HeroSection() {
   return (
     <div
       className="relative flex min-h-screen items-end justify-center"
@@ -19,7 +17,6 @@ function HeroSection() {
         alt={PROFILE.name}
         width={4000}
         height={2700}
-        placeholder="blur"
         priority
         className="absolute inset-0 z-10 h-full w-full object-cover"
       />
@@ -57,10 +54,10 @@ function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <h2 className="text-5xl font-semibold uppercase tracking-wide md:text-7xl">
-          {PROFILE.name}
+        <h2 className="text-5xl font-Oswald font-semibold tracking-wide md:text-7xl">
+          ADITYA DESHMUKH
         </h2>
-        <p className="pt-2 text-[14px] font-semibold tracking-normal">
+        <p className="pt-2 text-[14px] font-playAustralia  font-normal tracking-normal">
           {PROFILE.info}
         </p>
       </motion.div>

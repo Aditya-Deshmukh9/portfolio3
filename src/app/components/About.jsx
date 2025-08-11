@@ -3,20 +3,14 @@ import React from "react";
 import { ABOUT } from "../constants";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import SectionHeader from "./SectionHeader";
 
 function About() {
   const resumeLink = process.env.NEXT_PUBLIC_RESUME_LINK;
   return (
     <div className="container mx-auto" id="about">
-      <motion.h2
-        className="mt-20 text-center text-4xl font-semibold"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        About
-      </motion.h2>
+      <SectionHeader title={"About"}/>
+     
       <motion.h3
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -26,7 +20,7 @@ function About() {
       >
         <HighlightText text={ABOUT.text1} />
       </motion.h3>
-      <motion.h3
+      {/* <motion.h3
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
@@ -34,12 +28,12 @@ function About() {
         className="mr-24 pl-2 text-lg capitalize leading-loose tracking-normal lg:pl-4"
       >
         <HighlightText text={ABOUT.text2} />
-      </motion.h3>
+      </motion.h3> */}
       <div className="flex items-center justify-center p-5 animate-bounce">
         <Link
           href={resumeLink}
           target="_blank"
-          className="group relative flex h-auto w-[170px] cursor-pointer items-center justify-center overflow-hidden border-0 bg-transparent p-5 text-xl font-normal text-indigo-500 transition-all duration-100"
+          className="group relative flex h-auto w-[170px] cursor-pointer items-center justify-center overflow-hidden border-0 bg-transparent p-5 text-xl font-bold text-indigo-50 transition-all duration-100"
         >
           <span className="absolute left-0 h-full w-5 border-y border-l border-indigo-500 transition-all duration-500 group-hover:w-full"></span>
 

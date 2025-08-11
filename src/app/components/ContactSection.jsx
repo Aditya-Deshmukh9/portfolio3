@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { stepData } from '../constants';
+import SectionHeader from './SectionHeader';
 
 const ContactSection = () => {
     const [step, setStep] = useState(0);
@@ -97,59 +98,60 @@ const ContactSection = () => {
         }
     }, [submitStatus]);
 
-    // Modified keyboard navigation
-    useEffect(() => {
-        const handleKeyDown = (e) => {
-            // Only handle keyboard events if the form container or its children are focused
-            if (!containerRef.current?.contains(document.activeElement)) return;
-            if (isSubmitting) return;
+    const handleKeyDown =useCallback( (e) => {
+        // Only handle keyboard events if the form container or its children are focused
+        if (!containerRef.current?.contains(document.activeElement)) return;
+        if (isSubmitting) return;
 
-            switch (e.key) {
-                case 'Enter':
-                    e.preventDefault();
-                    setIsFormActive(true); // Mark form as active
-                    if (step < 2) {
-                        nextStep();
-                    } else {
-                        handleSubmit(e);
-                    }
-                    break;
-                    
-                case 'Backspace':
-                    const currentInput = inputRefs.current[step];
-                    if (e.ctrlKey || (currentInput && currentInput.value === '')) {
-                        e.preventDefault();
-                        setIsFormActive(true);
-                        prevStep();
-                    }
-                    break;
-                    
-                case 'ArrowRight':
-                    e.preventDefault();
-                    setIsFormActive(true);
+        switch (e.key) {
+            case 'Enter':
+                e.preventDefault();
+                setIsFormActive(true); // Mark form as active
+                if (step < 2) {
                     nextStep();
-                    break;
-                    
-                case 'ArrowLeft':
+                } else {
+                    handleSubmit(e);
+                }
+                break;
+                
+            case 'Backspace':
+                const currentInput = inputRefs.current[step];
+                if (e.ctrlKey || (currentInput && currentInput.value === '')) {
                     e.preventDefault();
                     setIsFormActive(true);
                     prevStep();
-                    break;
-                    
-                case 'Escape':
-                    setFormData({ name: '', email: '', message: '' });
-                    setStep(0);
-                    setSubmitStatus(null);
-                    setIsFormActive(false);
-                    // Remove focus to prevent unwanted scrolling
-                    document.activeElement?.blur();
-                    break;
-            }
-        };
+                }
+                break;
+                
+            case 'ArrowRight':
+                e.preventDefault();
+                setIsFormActive(true);
+                nextStep();
+                break;
+                
+            case 'ArrowLeft':
+                e.preventDefault();
+                setIsFormActive(true);
+                prevStep();
+                break;
+                
+            case 'Escape':
+                setFormData({ name: '', email: '', message: '' });
+                setStep(0);
+                setSubmitStatus(null);
+                setIsFormActive(false);
+                // Remove focus to prevent unwanted scrolling
+                document.activeElement?.blur();
+                break;
+        }
+    },[step, isSubmitting, nextStep, prevStep, handleSubmit])
+
+    // Modified keyboard navigation
+    useEffect(() => {
 
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [step, isSubmitting, nextStep, prevStep, handleSubmit]);
+    }, [handleKeyDown]);
 
     // Form validation
     const isStepValid = useCallback(() => {
@@ -176,6 +178,7 @@ const ContactSection = () => {
 
     return (
         <section id='contact' className='my-36'>
+            <SectionHeader title={"Contacts"}/>
             <div 
                 ref={containerRef}
                 className="max-w-2xl mx-auto p-6 bg-white/10 rounded-lg shadow-2xl"

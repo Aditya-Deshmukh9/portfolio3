@@ -6,22 +6,23 @@ import Link from "next/link";
 function Card({ image, title, description, githubLink, liveLink, category }) {
   return (
     <>
-      {/* <Link href="/"></Link> */}
       <div className="relative h-60">
-        {/* <Link href="#"> */}
         <Image
           path={image}
           alt={title}
+          priorty="true"
           transformation={[
             {
               height: "240px",
               width: "full",
             },
           ]}
-          className="object-cover object-left-top transition duration-300 ease-in-out hover:scale-110"
+          className="object-cover bg-white/95 p-4 object-center"
         />
-        {/* </Link> */}
-        <div className="absolute right-0 top-0 mr-3 mt-3 rounded-lg bg-indigo-700 px-2 py-1 text-xs lowercase tracking-tight text-white">
+        <div className={`absolute right-0 top-0 mr-3 mt-3 rounded-lg  px-2 py-1 text-xs capitalize tracking-tight text-white ${category === 'Frontend' ? 'bg-green-400' :
+          "bg-indigo-700"
+
+          }`}>
           {category}
         </div>
       </div>
@@ -29,11 +30,11 @@ function Card({ image, title, description, githubLink, liveLink, category }) {
       <div className="mb-auto px-6 py-4">
         <Link
           href="#"
-          className="mb-2 inline-block text-lg font-medium transition duration-500 ease-in-out hover:text-indigo-600"
+          className={`mb-2 inline-block text-lg font-medium transition duration-500 ease-in-out  hover:text-indigo-600`}
         >
           {title}
         </Link>
-        <p className="text-sm text-gray-500">{description}</p>
+        <p className="text-sm text-gray-400">{description}</p>
       </div>
 
       {/* links */}

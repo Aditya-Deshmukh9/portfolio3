@@ -13,7 +13,7 @@
 
   .social-icon {
     @apply h-6 w-6 transition duration-75 ease-in-out hover:scale-125 hover:text-[#51D94E] md:h-9 md:w-9;
-  }
+  } 
 }
 
 .loader {

@@ -1,6 +1,6 @@
 "use client";
 import { SOCIAL_MEDIA_LINKS } from "../constants";
-import { ArrowBigUpDash } from "lucide-react";
+import { FaArrowUp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export const constantVariable = {
@@ -67,7 +67,7 @@ function Footer() {
           onClick={scrollToTop}
           className="absolute -top-full left-1/2 mt-2 flex -translate-x-1/2 transform items-center justify-center rounded-md bg-gray-800 px-2 py-1 text-sm text-gray-100 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         >
-          <ArrowBigUpDash className="mr-1" />
+          <FaArrowUp className="mr-1" />
           Go Top
         </span>
       </div>

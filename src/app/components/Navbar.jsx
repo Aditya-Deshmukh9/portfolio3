@@ -3,14 +3,13 @@ import React, { useEffect, useState } from "react";
 import { NAVIGATION_LINKS } from "../constants/index.jsx";
 import { FaTimes, FaBars } from "react-icons/fa";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
   const [lastScrollY, setLastScrollY] = useState(0)
-    const [show, setShow] = useState(true)
+  const [show, setShow] = useState(true)
 
   const toggleMenuOpen = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -37,7 +36,7 @@ function Navbar() {
 
     const targetElement = document.querySelector(href);
     if (targetElement) {
-      const headerOffset = window.innerWidth >= 1024 ? 80 : 100; 
+      const headerOffset = window.innerWidth >= 1024 ? 80 : 100;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -51,24 +50,17 @@ function Navbar() {
   };
 
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -20 }}
       animate={{ y: show ? 0 : -100 }}
-      transition={{ duration: 0.3, delay:0.1, ease: "easeInOut" }}
+      transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
       className={`fixed left-0 right-0 z-50 sm:top-4 will-change-transform`}
     >
       {/* Desktop Menu */}
-      <nav className="mx-auto hidden max-w-lg items-center justify-center rounded-3xl bg-white/15 py-3 backdrop-blur-md lg:flex">
+      <nav className="mx-auto hidden max-w-md items-center justify-center rounded-3xl bg-white/15 py-3 backdrop-blur-md lg:flex">
         <div className="flex items-center gap-6">
-          <Link href="/">
-            <Image
-              src="/ani-logo.gif"
-              alt="logo"
-              width={90}
-              height={100}
-              priority
-              style={{ width: "120px", height: "auto" }}
-            />
+          <Link href="/" className='font-Oswald font-bold text-3xl'>
+            AD 
           </Link>
           <ul className="flex items-center gap-4">
             {NAVIGATION_LINKS.map((item, index) => (
@@ -94,16 +86,8 @@ function Navbar() {
           }`}
       >
         <div className="flex items-center justify-between">
-          <Link href="/">
-            <Image
-              src="/ani-logo.gif"
-              alt="logo"
-              width={90}
-              height={100}
-              priority
-              style={{ width: "120px", height: "auto" }}
-              className="m-2"
-            />
+          <Link href="/" className='font-Oswald font-bold text-3xl'>
+            AD
           </Link>
           <button
             className="focus:outline-none"

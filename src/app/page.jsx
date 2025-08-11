@@ -3,11 +3,12 @@ import React, { Suspense } from "react";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import HeroSection from "./components/HeroSection";
-import Certificate from "./components/Certificates";
 import dynamic from "next/dynamic";
+import { BiLoader } from "react-icons/bi";
 
-const Project = dynamic(() => import("./components/Project"), { ssr: false });
-const ContactSection = dynamic(() => import("./components/ContactSection"), { ssr: false });
+const Project = dynamic(() => import("./components/Project"));
+const ContactSection = dynamic(() => import("./components/ContactSection"));
+const Certificate = dynamic(() => import("./components/Certificates"));
 
 function Homepage() {
   return (
@@ -23,11 +24,16 @@ function Homepage() {
       <HeroSection />
       <About />
       <Skills />
-      <Suspense fallback={<div>Loading</div>}>
+
+      <Suspense fallback={<div className="flex items-center justify-center"><BiLoader className="animate-spin" /></div>}>
         <Project />
       </Suspense>
+
+      <Suspense fallback={<div className="flex items-center justify-center"><BiLoader className="animate-spin" /></div>}>
       <Certificate />
-      <Suspense fallback={<div>Loading</div>}>
+      </Suspense>
+
+      <Suspense fallback={<div className="flex items-center justify-center"><BiLoader className="animate-spin" /></div>}>
         <ContactSection />
       </Suspense>
     </div>

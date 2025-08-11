@@ -11,6 +11,7 @@ import { EffectCards, Autoplay } from "swiper/modules";
 import React from "react";
 import { CERTIFICATES } from "../constants";
 import Image from "./Image";
+import SectionHeader from "./SectionHeader";
 
 const constantVariable = {
   hidden: { opacity: 0, y: 20 },
@@ -27,15 +28,9 @@ const constantVariable = {
 function Certificate() {
   return (
     <div id="certificates">
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        Certificates
-      </motion.h2>
+    
+       <SectionHeader title={"Certificates"}/>
+    
       {/* Caursoul */}
       <motion.div
         initial="hidden"

@@ -2,6 +2,7 @@
 import React from "react";
 import { SKILLS } from "../constants";
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 
 const constantVariable = {
   hidden: { opacity: 0, y: 20 },
@@ -23,15 +24,8 @@ const itemVariants = {
 function Skill() {
   return (
     <div className="container mx-auto" id="skills">
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="section-title "
-      >
-        Skills
-      </motion.h2>
+     <SectionHeader title={"Skills"}/>
+      
       <motion.div
         initial="hidden"
         whileInView="visible"

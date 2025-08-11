@@ -11,7 +11,7 @@ export default function SmoothScroll({ children }) {
     useEffect(() => {
         function update(data) {
             const time = data.timestamp;
-            lenisRef.current?.lenis.raf(time)
+            lenisRef.current?.lenis?.raf(time)
         }
 
         frame.update(update, true)
