@@ -107,8 +107,21 @@ export const CERTIFICATES = [
     image: "udemyCertificate.webp",
   },
   {
+<<<<<<< HEAD
     title:'Full Stack Development Course',
     image: "nsdc-fsd.jpg"
+=======
+    title: "JavaScript Course",
+    image: "js.jpg",
+  },
+  {
+    title: "Full Stack Development Course",
+    image: "letbigin.jpg",
+  },
+  {
+    title:'NSDC Full Stack Development Certificate',
+    image:"nsdc-fsd.jpg"
+>>>>>>> a538580af49cc148f40cd084899431f5775fae51
   }
 ];
 
