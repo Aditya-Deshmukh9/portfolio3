@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import profilepic from "@/public/profilepic.webp";
 import { constantVariable, itemVariants } from "./Footer";
+import useDisableInspect from "../hooks/useDisableInspect";
 
 
 function HeroSection() {
+   useDisableInspect()
   return (
     <div
       className="relative flex min-h-screen items-end justify-center"
