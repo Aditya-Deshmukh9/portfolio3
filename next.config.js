@@ -1,10 +1,4 @@
-
-const withBundlerAnalyzer = require('@next/bundle-analyzer')({
-  enabled:process.env.NEXT_PUBLIC_ANALYZE
-})
-
 const nextConfig = {
-   output:'standalone',
   async redirects() {
     return [
       {
@@ -32,4 +26,4 @@ const nextConfig = {
 }
 
 
-module.exports = withBundlerAnalyzer(nextConfig)
+module.exports = nextConfig
