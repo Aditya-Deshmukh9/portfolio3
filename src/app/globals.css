@@ -128,3 +128,16 @@ p {
   border-radius: 3px;
 
 }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-in-out forwards;
+}

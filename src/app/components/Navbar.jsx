@@ -60,7 +60,7 @@ function Navbar() {
       <nav className="mx-auto hidden max-w-md items-center justify-center rounded-3xl bg-white/15 py-3 backdrop-blur-md lg:flex">
         <div className="flex items-center gap-6">
           <Link href="/" className='font-Oswald font-bold text-3xl'>
-            AD 
+            AD
           </Link>
           <ul className="flex items-center gap-4">
             {NAVIGATION_LINKS.map((item, index) => (
@@ -85,7 +85,7 @@ function Navbar() {
         className={`transition-all duration-75 lg:hidden ${isMobileMenuOpen ? "bg-black" : "backdrop-blur-md"
           }`}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between p-4">
           <Link href="/" className='font-Oswald font-bold text-3xl'>
             AD
           </Link>
@@ -102,7 +102,9 @@ function Navbar() {
           </button>
         </div>
         {isMobileMenuOpen && (
-          <section className="grid h-screen place-content-start gap-2 bg-black px-8 py-24 text-white">
+          <section className="grid h-screen place-content-start gap-2 bg-black px-8 py-24 text-white
+               transition-transform duration-300 ease-in-out
+               origin-bottom-right scale-0 animate-scaleIn">
             {NAVIGATION_LINKS.map((item, index) => (
               <FlipLink
                 key={index}
