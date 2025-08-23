@@ -22,7 +22,7 @@ function Homepage() {
         <div className="absolute inset-0 tech-grid opacity-20"></div>
       </div>
       <HeroSection />
-      {/* <About />
+      <About />
       <Skills />
 
       <Suspense fallback={<div className="flex items-center justify-center"><BiLoader className="animate-spin" /></div>}>
@@ -35,7 +35,7 @@ function Homepage() {
 
       <Suspense fallback={<div className="flex items-center justify-center"><BiLoader className="animate-spin" /></div>}>
         <ContactSection />
-      </Suspense> */}
+      </Suspense>
     </div>
   );
 }
