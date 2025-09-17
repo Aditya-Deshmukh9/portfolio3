@@ -35,7 +35,7 @@ export const projectData = [
     description:
       "ContentGenie is a simple tool that helps you quickly generate content for various needs. After generating content, you can easily customize it to match your style..",
     githubLink: "https://github.com/Aditya-Deshmukh9/ai-content-generator",
-    liveLink: "https://contentgenie.adityadeshmukh.online/",
+    liveLink: "https://contentgenie.adityapro.online/",
   },
   {
     title: "Full Stack Ecommerce",

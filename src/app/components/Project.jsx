@@ -57,9 +57,7 @@ function Project() {
         className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-pink-900/10"
       />
 
-      {/* Decorative elements */}
-      <div className="absolute top-16 left-8 lg:left-16 w-20 h-20 lg:w-32 lg:h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse" />
-      <div className="absolute bottom-16 right-8 lg:right-16 w-24 h-24 lg:w-40 lg:h-40 bg-gradient-to-r from-pink-400/20 to-orange-400/20 rounded-full blur-xl animate-pulse delay-1000" />
+
 
       <div className="relative z-10">
         {/* Enhanced title section */}

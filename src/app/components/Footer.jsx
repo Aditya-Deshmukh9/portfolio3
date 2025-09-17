@@ -28,7 +28,7 @@ function Footer() {
   };
 
   return (
-    <div className="mt-20 flex flex-col justify-between p-5 px-5 lg:flex-row lg:px-32">
+    <div className="mt-20 flex flex-col mx-auto container justify-between p-5 px-5 lg:flex-row lg:px-32">
       <motion.div
         initial="hidden"
         whileInView="visible"
