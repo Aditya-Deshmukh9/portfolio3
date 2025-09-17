@@ -7,7 +7,7 @@ import { MorphingText } from "./magicui";
 
 
 function HeroSection() {
-  // useDisableInspect()
+  useDisableInspect()
   return (
     <div
       className="relative flex container mx-auto min-h-[700px] max-h-[100vh] items-end justify-center"
