@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SmoothScroll from "./components/SmoothScroll";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"], display:
@@ -24,14 +25,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWFQ3B04WP"></script>
-      <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
+  <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+        />
 
-        gtag('config', 'G-KWFQ3B04WP');
-      </script>
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       <body className={`${inter.className} ${roboto.className} bg-black tracking-tighter text-gray-200 antialiased scroll-smooth`}>
         <SmoothScroll>
           <Navbar />
