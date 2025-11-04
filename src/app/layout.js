@@ -24,7 +24,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     <!-- Google tag (gtag.js) -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWFQ3B04WP"></script>
       <script>
        window.dataLayer = window.dataLayer || [];
