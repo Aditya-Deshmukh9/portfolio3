@@ -3,12 +3,12 @@ const nextConfig = {
     return [
       {
         source: "/linkedin",
-        destination: "https://www.linkedin.com/in/aditya-deshmukh-878482229",
+        destination: "https://www.linkedin.com/in/adi-de9",
         permanent: true,
       },
       {
         source: "/github",
-        destination: "https://github.com/Aditya-Deshmukh9",
+        destination: "https://github.com/adi-de9",
         permanent: true,
       },
       {

@@ -118,22 +118,17 @@ export const CERTIFICATES = [
 
 export const SOCIAL_MEDIA_LINKS = [
   {
-    href: "https://x.com/",
-    ariaLabel: "Visit our Facebook page", // Added aria-label
-    icon: <FaFacebook fontSize={26} className="social-icon" />,
-  },
-  {
     href: "https://x.com/adityadesh937?t=U_Wy5P0J2o2q1tRciLNOqg&s=08",
     ariaLabel: "Visit our Twitter page", // Added aria-label
     icon: <FaXTwitter fontSize={26} className="social-icon" />,
   },
   {
-    href: "https://github.com/Aditya-Deshmukh9",
+    href: "https://github.com/adi-de9",
     ariaLabel: "Visit our GitHub profile", // Added aria-label
     icon: <FaGithub fontSize={26} className="social-icon" />,
   },
   {
-    href: "https://www.linkedin.com/in/aditya-deshmukh-878482229",
+    href: "https://linkedin.com/in/adi-de9",
     ariaLabel: "Visit our LinkedIn profile", // Added aria-label
     icon: <FaLinkedin className="social-icon" />,
   },
