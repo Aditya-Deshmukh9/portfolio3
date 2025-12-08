@@ -47,7 +47,7 @@ const backgroundVariants = {
 
 function Project() {
   return (
-    <section id="projects" className="relative pb-4 lg:pb-4 overflow-hidden">
+    <section id="projects" className="relative py-4 lg:py-10 overflow-hidden">
       {/* Background gradient */}
       <motion.div
         initial="hidden"
@@ -56,8 +56,6 @@ function Project() {
         variants={backgroundVariants}
         className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-pink-900/10"
       />
-
-
 
       <div className="relative z-10">
         {/* Enhanced title section */}
@@ -71,7 +69,7 @@ function Project() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10 lg:gap-12 xl:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 xl:gap-8"
           >
             {projectData.map((project, index) => (
               <motion.div

@@ -20,15 +20,6 @@ function About() {
       >
         <HighlightText text={ABOUT.text1} />
       </motion.h3>
-      {/* <motion.h3
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="mr-24 pl-2 text-lg capitalize leading-loose tracking-normal lg:pl-4"
-      >
-        <HighlightText text={ABOUT.text2} />
-      </motion.h3> */}
       <div className="flex items-center justify-center p-5 animate-bounce">
         <Link
           href={resumeLink}

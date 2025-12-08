@@ -7,6 +7,17 @@ import { FaCss3Alt, FaNodeJs } from "react-icons/fa";
 
 import { IoLogoHtml5, IoLogoJavascript } from "react-icons/io";
 
+import {
+  Code,
+  Palette,
+  Zap,
+  Github,
+  Database,
+  Layout,
+  Server,
+  Globe,
+} from 'lucide-react';
+
 export const NAVIGATION_LINKS = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
@@ -99,6 +110,40 @@ export const SKILLS = [
     name: "Node.js",
     experience: "6+ months",
   },
+];
+
+export const skillCategories = [
+  {
+    title: "Frontend",
+    gradient: "from-cyan-500 to-blue-500",
+    skills: [
+      { name: "React.js", icon: Code },
+      { name: "Next.js", icon: Globe },
+      { name: "TypeScript", icon: Code },
+      { name: "Tailwind CSS", icon: Palette },
+      { name: "Framer Motion", icon: Zap },
+    ]
+  },
+  {
+    title: "Backend",
+    gradient: "from-purple-500 to-pink-500",
+    skills: [
+      { name: "Node.js", icon: Server },
+      { name: "PostgreSQL", icon: Database },
+      { name: "Firebase", icon: Zap },
+      { name: "GraphQL", icon: Layout },
+    ]
+  },
+  {
+    title: "DevOps & Tools",
+    gradient: "from-green-500 to-emerald-500",
+    skills: [
+      { name: "Git", icon: Github },
+      { name: "Docker", icon: Server },
+      { name: "Figma", icon: Palette },
+      { name: "Vercel", icon: Globe },
+    ]
+  }
 ];
 
 export const CERTIFICATES = [

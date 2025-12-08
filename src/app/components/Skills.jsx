@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { SKILLS } from "../constants";
+import { skillCategories, SKILLS } from "../constants";
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
 
@@ -21,12 +21,55 @@ const itemVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
 
+export const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2
+    }
+  }
+};
+export const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
+
+
 function Skill() {
   return (
-    <div className="container mx-auto" id="skills">
+    <div className="container  px-6 mx-auto" id="skills">
      <SectionHeader title={"Skills"}/>
       
-      <motion.div
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {skillCategories.map((category, idx) => (
+          <motion.div
+            key={idx}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+            className="space-y-6 bg-neutral-900/30 border border-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-neutral-900/50 transition-colors"
+          >
+            <h3 className="text-xl font-bold text-white flex items-center gap-3">
+              <div className={`w-2 h-8 rounded-full bg-gradient-to-b ${category.gradient}`} />
+              {category.title}
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {category.skills.map((skill, sIdx) => (
+                <SkillPill key={sIdx} {...skill} color={category.gradient} />
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -48,9 +91,24 @@ function Skill() {
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }
+
+const SkillPill = ({ icon: Icon, name, color, delay }) => (
+
+
+  <motion.div
+    variants={fadeInUp}
+    whileHover={{ y: -5 }}
+    className="group relative flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/5 overflow-hidden transition-all"
+  >
+    <div className={`absolute inset-0 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-10 transition-opacity`} />
+    <Icon size={18} className={`text-neutral-400 group-hover:text-white transition-colors z-10`} />
+    <span className="text-neutral-300 group-hover:text-white font-medium text-sm z-10">{name}</span>
+  </motion.div>
+);
+
 
 export default Skill;
