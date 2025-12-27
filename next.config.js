@@ -1,4 +1,10 @@
 const nextConfig = {
+  images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [],
+  },
   async redirects() {
     return [
       {
@@ -14,6 +20,26 @@ const nextConfig = {
       {
         source: "/x",
         destination: "https://x.com/adityadesh937",
+        permanent: true,
+      },
+      {
+        source: "/contentgenie",
+        destination: "https://github.com/adi-de9/ai-content-generator",
+        permanent: true,
+      },
+      {
+        source: "/contentgenie-live",
+        destination: "https://contentgenie.adityapro.online/",
+        permanent: true,
+      },
+      {
+        source: "/ecom",
+        destination: "https://github.com/Aditya-Deshmukh9/Ecommerce",
+        permanent: true,
+      },
+      {
+        source: "/ecom-live",
+        destination: "https://ecom-colab-a.vercel.app/",
         permanent: true,
       },
       {
